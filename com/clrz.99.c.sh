@@ -18,8 +18,8 @@ main() {
     } >&2
 
     set -x
-    eval -- "$CC $SRC -o clrz $CFLAGS"
-    [ "$STRIP" ] && eval -- "strip $SFLAGS clrz"
+    eval "$CC $SRC -o clrz $CFLAGS"
+    [ "$STRIP" ] && eval "strip $SFLAGS clrz"
     set +x
 }
 
